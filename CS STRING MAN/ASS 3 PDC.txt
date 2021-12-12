@@ -1,0 +1,45 @@
+        //DECLARATION
+        DECLARE mystr: STRING
+        DECLARE i, number, mycount, alpcount, dcount, spcount: INTEGER
+        DECLARE thischar, tobecounted: CHARACTER
+
+        //INITIALISATION
+        mystr ← ""
+        tobecounted ← ""
+        i ← 0
+        number ← 0
+        thischar ← ''
+        mycount ← 0
+        alpcount ← 0
+        dcount ← 0
+        spcount ← 0
+
+        //INPUT
+        INPUT "Enter a string: ", mystr 
+        mystr ← LCase(mystr)
+        INPUT "Enter character to be counted : ", tobecounted
+
+        //Process
+        FOR i ← 1 TO Len(mystr)
+            thischar ← Mid(mystr, i, 1)
+            IF thischar ← tobecounted THEN
+                mycount ← mycount + 1
+            ELSE
+
+            END IF
+            IF thischar >= 'a' AND thischar <= 'z' THEN
+                alpcount ← alpcount + 1
+            ELSEIF  thischar >= '0' AND thischar <= '9' THEN
+                dcount ← dcount + 1
+            ELSE
+                spcount ← spcount + 1
+
+            END IF
+
+        NEXT
+        
+        //OUTPUT   
+        OUTPUT "count of " & tobecounted & " is: " & mycount
+        OUTPUT "count of alphabets is: " & alpcount
+        OUTPUT "count of digits is: " & dcount
+        OUTPUT "count of special characters is: " & spcount

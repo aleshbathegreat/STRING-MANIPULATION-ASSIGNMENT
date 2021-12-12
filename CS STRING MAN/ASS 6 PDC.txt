@@ -1,0 +1,16 @@
+        //DECLARATION
+        DECLARE donutqty : INTEGER
+
+        //Initialisation
+        donutqty ← 0
+
+        //INPUT
+        INPUT "Enter number of donuts: ", donutqty
+
+        //PROCESS
+        IF donutqty >= 10 THEN
+            OUTPUT "Number of donuts: many"
+        ELSE
+            OUTPUT "Number of donuts: " & donutqty
+
+        END IF

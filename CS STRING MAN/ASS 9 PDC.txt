@@ -1,0 +1,23 @@
+        //DECLARATION
+        DECLARE a, b, afirst2, bfirst2, newa, newb : STRING
+
+        //INITIALISATION
+        a ← ""
+        b ← ""
+        afirst2 ← ""
+        bfirst2 ← ""
+        newa ← ""
+        newb ← ""
+
+        //INPUT
+        INPUT "Enter first string: ", a
+        INPUT "Enter second string: ", b
+
+        //PROCESS
+        afirst2 ← LEFT(a, 2)
+        bfirst2 ← LEFT(b, 2)
+        newa ← bfirst2 & RIGHT(a, Len(a) - 2)
+        newb ← afirst2 & RIGHT(b, Len(b) - 2)
+
+        //OUTPUT
+        OUTPUT "New string is: " & newa & " " & newb

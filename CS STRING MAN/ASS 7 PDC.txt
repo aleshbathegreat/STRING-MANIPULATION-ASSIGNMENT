@@ -1,0 +1,27 @@
+        //DECLARATION
+        DECLARE s, first2, last2 : STRING
+        DECLARE isshort : BOOLEAN
+
+        //INITIALISATION
+        s ← ""
+        first2 ← ""
+        last2 ← ""
+        isshort ← FALSE
+
+        //INPUT
+        INPUT "Enter a string: ", s
+
+        //PROCESS
+        IF Len(s) < 2 THEN
+            isshort ← TRUE
+        ELSE
+            first2 ← LEFT(s, 2)
+            last2 ← RIGHT(s, 2)
+        END IF
+
+        //OUTPUT
+        IF isshort ← TRUE THEN
+            OUTPUT "New string is: " & s
+        ELSE
+            OUTPUT "New string is: " & first2 & last2
+        END IF

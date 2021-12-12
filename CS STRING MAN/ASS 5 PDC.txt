@@ -1,0 +1,48 @@
+        //DECLARATION
+        DECLARE mystr : STRING
+        DECLARE i, acount, ecount, icount, ocount, ucount : INTEGER
+        DECLARE thischar : CHARACTER
+
+        //INITIALISATION
+        mystr ← ""
+        i ← 0
+        thischar ← ''
+        acount ← 0
+        ecount ← 0
+        icount ← 0
+        ocount ← 0
+        ucount ← 0
+
+        //INPUT
+        INPUT "Enter a string; ", mystr
+        mystr ← LCase(mystr)
+
+        //PROCESS
+        FOR i ← 1 TO Len(mystr)
+            thischar ← Mid(mystr, i, 1)
+            IF thischar ← 'a' THEN
+                acount ← acount + 1
+            END IF
+            IF thischar ← 'e' THEN
+                ecount ← ecount + 1
+            END IF
+            IF thischar ← 'i' THEN
+                icount ← icount + 1
+            END IF
+            IF thischar ← 'o' THEN
+                ocount ← ocount + 1
+            END IF
+            IF thischar ← 'u' THEN
+                ucount ← ucount + 1
+            END IF
+
+        NEXT
+
+        //OUTPUT
+        OUTPUT "vowel a appears " & acount & " times"
+        OUTPUT "vowel e appears " & ecount & " times"
+        OUTPUT "vowel i appears " & icount & " times"
+        OUTPUT "vowel o appears " & ocount & " times"
+        OUTPUT "vowel u appears " & ucount & " times"
+
+        

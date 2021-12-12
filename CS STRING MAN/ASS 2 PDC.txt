@@ -1,0 +1,38 @@
+        //DECLARATION
+        DECLARE str1, str2: STRING
+        DECLARE count: INTEGER
+        DECLARE mychar, repchar, newchar: CHARACTER
+
+        //INITIALISATION
+        str1 ← ""
+        str2 ← ""
+        mychar ← ''
+        repchar ← ''
+        newchar ← ''
+        count ← 0
+
+        //INPUT
+        INPUT "Enter a string: ", str1
+        
+        INPUT "Select character to replace: ", repchar
+        
+        INPUT "Enter character to be replaced with: ", newchar
+        
+        //PROCESS
+        FOR count ← 1 TO Len(str1)
+            mychar ← MID(str1, count, 1)
+            IF mychar ← repchar 
+              THEN
+                mychar ← newchar
+                str2 ← str2 & mychar
+              ElSE
+                mychar ← mychar
+                str2 ← str2 & mychar
+
+            END IF
+        NEXT count
+
+        //OUTPUT
+        OUTPUT "The new string is: " & str2
+        
+

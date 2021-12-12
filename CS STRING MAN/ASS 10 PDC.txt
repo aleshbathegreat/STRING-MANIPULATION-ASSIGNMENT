@@ -1,0 +1,25 @@
+       //DECLARATION
+        DECLARE mystr, word : STRING
+
+        //INITIALISATION
+        mystr ← ""
+        word ← ""
+
+        //INPUT
+        INPUT "Enter a string: ", mystr
+        
+        //PROCESS
+        IF LEN(mystr) < 3 THEN
+            mystr ← mystr
+        ELSE
+            word ← RIGHT(mystr, 3)
+                IF word ← "ing" THEN
+                    mystr ← mystr & "ly"
+                END IF
+                IF word <> "ing" THEN
+                    mystr ← mystr & "ing"
+                END IF
+        END IF
+
+        //OUTPUT
+        OUTPUT "New string is: " & mystr

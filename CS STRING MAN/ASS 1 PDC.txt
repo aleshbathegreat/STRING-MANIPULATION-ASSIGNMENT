@@ -1,0 +1,50 @@
+//VISUALISATION
+INPUT NO.1: Pack my box with five dozen liquor jugs
+OUTPUT: Entered string is Pangram
+
+INPUT NO.2: Aleshba the great
+OUTPUT: Entered string is not Pangram
+
+//DECLARATION
+DECLARE str1 : STRING
+DECLARE thischar : CHARACTER
+DECLARE i, count : INTEGER
+DECLARE isPangram : BOOLEAN
+
+//INITIALSATION
+str1 ← ""
+i = 0
+count = 0
+thischar = ''
+iaPangram = FALSE
+
+//INPUT
+INPUT "Enter a string: ", str1
+str1 ← UCase(str1)
+
+//PROCESS
+IF LEN(str1) < 26
+  THEN
+    OUTPUT "Entered string is not Pangram"
+  ELSE
+FOR i ← = 65 TO 90
+    isPangram = FALSE
+    FOR count = 1 TO LEN(str1)
+    thischar = MID(str1, count, 1)
+    IF ASC(thischar) = i THEN isPangram = TRUE
+Exit FOR
+NEXT count
+ 
+//OUTPUT
+IF isPangram = FALSE THEN
+    OUTPUT "Entered string is not Pangram."
+  ELSE
+    OUTPUT "Entered string is Pangram."
+END IF
+
+
+   
+
+
+
+

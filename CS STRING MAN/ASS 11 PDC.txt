@@ -1,0 +1,33 @@
+        //DECLARATION
+        DECLARE mystr, check, newstr : STRING
+        DECLARE i, notlocation, badlocation : INTEGER
+
+        //INITIALISATION
+        mystr ← ""
+        check ← ""
+        newstr ← ""
+        i ← 0
+        notlocation ← 0
+        badlocation ← 0
+
+        //INPUT
+        Input "Enter a string: ", mystr
+        mystr ← LCase(mystr)
+
+        //PROCESS
+        FOR i ← 1 TO LEN(mystr)
+            check ← MID(mystr, i, 3)
+            IF check ← "not" THEN
+                notlocation ← i
+            ELSE
+                IF check ← "bad" THEN
+                    badlocation ← i
+                END IF
+            END IF
+        NEXT
+        newstr ← newstr & LEFT(mystr, notlocation - 1)
+        newstr ← newstr & "good"
+        newstr ← newstr & MID(mystr, badlocation + 3, LEN(mystr))
+
+        //OUTPUT
+       OUTPUT "New string is: " & newstr

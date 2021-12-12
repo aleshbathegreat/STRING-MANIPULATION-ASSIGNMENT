@@ -1,0 +1,36 @@
+        //DECLARATION
+        DECLARE mystr : STRING
+        DECLARE firstchar, secondchar, mychar : CHARACTER
+        DECLARE i, maxcharcount, j, highest : INTEGER
+
+        //INITIALISATION
+        mystr ← ""
+        firstchar ← ''
+        secondchar ← ''
+        mychar ← ''
+        i ← 0
+        maxcharcount ← 0
+        j ← 0
+        highest ← -1
+
+        //INPUT
+        INPUT "Enter a string: ", mystr
+        
+        //PROCESS
+        FOR i ← 1 TO LEN(mystr)
+            firstchar ← MID(mystr, i, 1)
+            maxcharcount ← 0
+            FOR j ← 1 TO LEN(mystr)
+                secondchar ← MID(mystr, j, 1)
+                IF secondchar ← firstchar THEN
+                    maxcharcount ← maxcharcount + 1
+                END IF       
+            NEXT
+            IF maxcharcount > highest THEN
+                highest ← maxcharcount
+                mychar ← firstchar
+            END IF
+        NEXT
+
+        //OUTPUT
+        OUTPUT "Most occuring character is: " & mychar
